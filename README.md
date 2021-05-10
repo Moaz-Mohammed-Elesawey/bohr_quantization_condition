@@ -2,7 +2,9 @@
 
 Bohr's quantization condition: The angular momentum of an electron in an orbit around the hydrogen atom has to be an integral multiple of Planck's constant divided by twice π.
 
-$$r = R + Asin(n\theta)$$
+```math
+r = R + Asin(n\theta)
+```
 
 ### requirments
  - python3 >= 3.7.5
