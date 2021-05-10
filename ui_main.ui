@@ -196,12 +196,15 @@ QLineEdit:disbaled{
                <height>30</height>
               </size>
              </property>
+             <property name="minimum">
+              <double>-100.000000000000000</double>
+             </property>
              <property name="value">
               <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
+           <item row="2" column="0">
             <widget class="QLabel" name="label_3">
              <property name="font">
               <font>
@@ -214,7 +217,7 @@ QLineEdit:disbaled{
              </property>
             </widget>
            </item>
-           <item row="4" column="0" colspan="2">
+           <item row="6" column="0" colspan="2">
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <property name="spacing">
               <number>4</number>
@@ -234,7 +237,7 @@ QLineEdit:disbaled{
              <item>
               <widget class="QLabel" name="label_5">
                <property name="text">
-                <string>1</string>
+                <string>-10</string>
                </property>
               </widget>
              </item>
@@ -247,7 +250,7 @@ QLineEdit:disbaled{
                 </size>
                </property>
                <property name="minimum">
-                <number>0</number>
+                <number>-100</number>
                </property>
                <property name="maximum">
                 <number>100</number>
@@ -278,7 +281,7 @@ QLineEdit:disbaled{
              </item>
             </layout>
            </item>
-           <item row="1" column="1">
+           <item row="2" column="1">
             <widget class="QDoubleSpinBox" name="A_inp">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -292,12 +295,15 @@ QLineEdit:disbaled{
                <height>30</height>
               </size>
              </property>
+             <property name="minimum">
+              <double>-100.000000000000000</double>
+             </property>
              <property name="value">
               <double>0.150000000000000</double>
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
+           <item row="4" column="1">
             <widget class="QDoubleSpinBox" name="n_inp">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -318,14 +324,14 @@ QLineEdit:disbaled{
               <string/>
              </property>
              <property name="minimum">
-              <double>0.000000000000000</double>
+              <double>-100.000000000000000</double>
              </property>
              <property name="value">
               <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
+           <item row="4" column="0">
             <widget class="QLabel" name="label_4">
              <property name="font">
               <font>
@@ -337,6 +343,134 @@ QLineEdit:disbaled{
               <string>n</string>
              </property>
             </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>-10</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSlider" name="A_slider">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="minimum">
+                <number>-100</number>
+               </property>
+               <property name="maximum">
+                <number>100</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="pageStep">
+                <number>1</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::TicksBothSides</enum>
+               </property>
+               <property name="tickInterval">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>10</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_17">
+               <property name="text">
+                <string>-10</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSlider" name="R_slider">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="minimum">
+                <number>-100</number>
+               </property>
+               <property name="maximum">
+                <number>100</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="pageStep">
+                <number>1</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::TicksBothSides</enum>
+               </property>
+               <property name="tickInterval">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_18">
+               <property name="text">
+                <string>10</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>

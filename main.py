@@ -45,8 +45,12 @@ class MainWindow(QMainWindow):
 
         self.ui.plot_btn.clicked.connect(lambda e: self.plot_callback(move=False))
         self.ui.n_slider.sliderMoved.connect(lambda e: self.plot_callback(move=True))
+        self.ui.R_slider.sliderMoved.connect(lambda e: self.plot_callback(move=True))
+        self.ui.A_slider.sliderMoved.connect(lambda e: self.plot_callback(move=True))
 
-        self.ui.n_slider.valueChanged.connect(self.slider_callback)
+        self.ui.n_slider.valueChanged.connect(self.slider_n_callback)
+        self.ui.R_slider.valueChanged.connect(self.slider_R_callback)
+        self.ui.A_slider.valueChanged.connect(self.slider_A_callback)
 
 
         self.show()
@@ -90,8 +94,8 @@ class MainWindow(QMainWindow):
             self.sc.ax.plot(theta, r, color='r', label=r'$r = R + Asin(n\theta)$', alpha=.6)
             self.sc.ax.plot(theta, r_, color='b', label=r'$r = R', alpha=.8)
 
-            self.sc.ax.axes.set_rmax(1.5)
-            self.sc.ax.axes.set_rticks(np.arange(0, 1.4, .2))  # Less radial ticks
+            self.sc.ax.axes.set_rmax(np.max(r) + (np.mean(r)/2))
+            # self.sc.ax.axes.set_rticks(np.arange(np.min(r), np.max(r), .2))  # Less radial ticks
             self.sc.ax.axes.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
             self.sc.ax.axes.grid(True)
 
@@ -99,8 +103,15 @@ class MainWindow(QMainWindow):
 
             self.sc.draw()
 
-    def slider_callback(self, value):
+    def slider_n_callback(self, value):
         self.ui.n_inp.setValue((value / 10))
+
+    def slider_R_callback(self, value):
+        self.ui.R_inp.setValue((value / 10))
+
+    def slider_A_callback(self, value):
+        self.ui.A_inp.setValue((value / 10))
+
 
 
 if __name__ == '__main__':

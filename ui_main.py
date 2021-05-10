@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(950, 650)
         icon = QIcon()
         icon.addFile(u"icon.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -115,6 +115,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.R_inp.sizePolicy().hasHeightForWidth())
         self.R_inp.setSizePolicy(sizePolicy)
         self.R_inp.setMinimumSize(QSize(0, 30))
+        self.R_inp.setMinimum(-100.000000000000000)
         self.R_inp.setValue(1.000000000000000)
 
         self.gridLayout_2.addWidget(self.R_inp, 0, 1, 1, 1)
@@ -123,7 +124,7 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName(u"label_3")
         self.label_3.setFont(font)
 
-        self.gridLayout_2.addWidget(self.label_3, 1, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.label_3, 2, 0, 1, 1)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setSpacing(4)
@@ -137,7 +138,7 @@ class Ui_MainWindow(object):
         self.n_slider = QSlider(self.groupBox_2)
         self.n_slider.setObjectName(u"n_slider")
         self.n_slider.setMinimumSize(QSize(0, 30))
-        self.n_slider.setMinimum(0)
+        self.n_slider.setMinimum(-100)
         self.n_slider.setMaximum(100)
         self.n_slider.setSingleStep(1)
         self.n_slider.setPageStep(1)
@@ -153,32 +154,93 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.label_7)
 
 
-        self.gridLayout_2.addLayout(self.horizontalLayout_2, 4, 0, 1, 2)
+        self.gridLayout_2.addLayout(self.horizontalLayout_2, 6, 0, 1, 2)
 
         self.A_inp = QDoubleSpinBox(self.groupBox_2)
         self.A_inp.setObjectName(u"A_inp")
         sizePolicy.setHeightForWidth(self.A_inp.sizePolicy().hasHeightForWidth())
         self.A_inp.setSizePolicy(sizePolicy)
         self.A_inp.setMinimumSize(QSize(0, 30))
+        self.A_inp.setMinimum(-100.000000000000000)
         self.A_inp.setValue(0.150000000000000)
 
-        self.gridLayout_2.addWidget(self.A_inp, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.A_inp, 2, 1, 1, 1)
 
         self.n_inp = QDoubleSpinBox(self.groupBox_2)
         self.n_inp.setObjectName(u"n_inp")
         sizePolicy.setHeightForWidth(self.n_inp.sizePolicy().hasHeightForWidth())
         self.n_inp.setSizePolicy(sizePolicy)
         self.n_inp.setMinimumSize(QSize(0, 30))
-        self.n_inp.setMinimum(0.000000000000000)
+        self.n_inp.setMinimum(-100.000000000000000)
         self.n_inp.setValue(1.000000000000000)
 
-        self.gridLayout_2.addWidget(self.n_inp, 2, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.n_inp, 4, 1, 1, 1)
 
         self.label_4 = QLabel(self.groupBox_2)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setFont(font)
 
-        self.gridLayout_2.addWidget(self.label_4, 2, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.label_4, 4, 0, 1, 1)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(4)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(5, 5, 5, 5)
+        self.label_8 = QLabel(self.groupBox_2)
+        self.label_8.setObjectName(u"label_8")
+
+        self.horizontalLayout_3.addWidget(self.label_8)
+
+        self.A_slider = QSlider(self.groupBox_2)
+        self.A_slider.setObjectName(u"A_slider")
+        self.A_slider.setMinimumSize(QSize(0, 30))
+        self.A_slider.setMinimum(-100)
+        self.A_slider.setMaximum(100)
+        self.A_slider.setSingleStep(1)
+        self.A_slider.setPageStep(.5)
+        self.A_slider.setOrientation(Qt.Horizontal)
+        self.A_slider.setTickPosition(QSlider.TicksBothSides)
+        self.A_slider.setTickInterval(10)
+
+        self.horizontalLayout_3.addWidget(self.A_slider)
+
+        self.label_9 = QLabel(self.groupBox_2)
+        self.label_9.setObjectName(u"label_9")
+
+        self.horizontalLayout_3.addWidget(self.label_9)
+
+
+        self.gridLayout_2.addLayout(self.horizontalLayout_3, 3, 0, 1, 2)
+
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setSpacing(4)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(5, 5, 5, 5)
+        self.label_17 = QLabel(self.groupBox_2)
+        self.label_17.setObjectName(u"label_17")
+
+        self.horizontalLayout_6.addWidget(self.label_17)
+
+        self.R_slider = QSlider(self.groupBox_2)
+        self.R_slider.setObjectName(u"R_slider")
+        self.R_slider.setMinimumSize(QSize(0, 30))
+        self.R_slider.setMinimum(-100)
+        self.R_slider.setMaximum(100)
+        self.R_slider.setSingleStep(.5)
+        self.R_slider.setPageStep(.5)
+        self.R_slider.setOrientation(Qt.Horizontal)
+        self.R_slider.setTickPosition(QSlider.TicksBothSides)
+        self.R_slider.setTickInterval(10)
+
+        self.horizontalLayout_6.addWidget(self.R_slider)
+
+        self.label_18 = QLabel(self.groupBox_2)
+        self.label_18.setObjectName(u"label_18")
+
+        self.horizontalLayout_6.addWidget(self.label_18)
+
+
+        self.gridLayout_2.addLayout(self.horizontalLayout_6, 1, 0, 1, 2)
 
 
         self.verticalLayout.addWidget(self.groupBox_2, 0, Qt.AlignTop)
@@ -240,11 +302,15 @@ class Ui_MainWindow(object):
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Parameters", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"R", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"A", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"-10", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"10", None))
         self.n_inp.setPrefix("")
         self.n_inp.setSuffix("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"n", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"-10", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"-10", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"10", None))
         self.plot_btn.setText(QCoreApplication.translate("MainWindow", u"Plot", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Interactive Plot", None))
     # retranslateUi
