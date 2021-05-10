@@ -3,7 +3,7 @@
 Bohr's quantization condition: The angular momentum of an electron in an orbit around the hydrogen atom has to be an integral multiple of Planck's constant divided by twice π.
 
 ```math
-r = R + Asin(n\theta)
+r = R + A.sin(nθ)
 ```
 
 ### requirments
