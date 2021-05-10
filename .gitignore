@@ -2,4 +2,5 @@ bin/
 __pycache__/
 AnalysisScript.py
 *.ipynb
+*.swp
 
