@@ -52,6 +52,8 @@ class MainWindow(QMainWindow):
         self.ui.R_slider.valueChanged.connect(self.slider_R_callback)
         self.ui.A_slider.valueChanged.connect(self.slider_A_callback)
 
+        self.setWindowIcon(QIcon('./icons/icon.png'))
+
 
         self.show()
 
@@ -92,7 +94,7 @@ class MainWindow(QMainWindow):
             r_ = np.repeat(self.R, r.shape[0])
 
             self.sc.ax.plot(theta, r, color='r', label=r'$r = R + Asin(n\theta)$', alpha=.6)
-            self.sc.ax.plot(theta, r_, color='b', label=r'$r = R', alpha=.8)
+            self.sc.ax.plot(theta, r_, color='b', label=r'$r = R$', alpha=.8)
 
             self.sc.ax.axes.set_rmax(np.max(r) + (np.mean(r)/2))
             # self.sc.ax.axes.set_rticks(np.arange(np.min(r), np.max(r), .2))  # Less radial ticks

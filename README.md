@@ -22,3 +22,10 @@ $ pip install -r requirments.txt
 $ python3 main.py
 ```
 
+### Screenshots
+![start page](./screenshots/screenshot1.png)
+![plot first](./screenshots/screenshot2.png)
+![change the orbital order](./screenshots/screenshot3.png)
+![change the const values](./screenshots/screenshot4.png)
+
+
